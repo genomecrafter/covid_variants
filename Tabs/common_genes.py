@@ -68,6 +68,9 @@ def show_common(df):
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
+        .text{
+            color: black !important;
+        }
         </style>
         """,
         unsafe_allow_html=True
@@ -97,7 +100,8 @@ def show_common(df):
         col1, col2 = st.columns(2)
 
         with col1:
-            st.subheader('Common Up-regulated Genes')
+            #st.subheader('Common Up-regulated Genes')
+            st.markdown("<h3 style='color: black;'>Common Up-regulated Genes</h3>", unsafe_allow_html=True)
             if isinstance(common_upregulated, set) and common_upregulated:
                 num_genes = len(common_upregulated)
                 st.markdown(f"<p style='font-size: 18px; color: #1F4E79; font-weight: bold;'>"
@@ -105,10 +109,12 @@ def show_common(df):
                             f"Common Upregulated Genes: {', '.join(list(common_upregulated))}</p>", 
                             unsafe_allow_html=True)
             else:
-                st.write("No common upregulated genes found.")  
+                #st.write("No common upregulated genes found.") 
+                st.write('<p class="text">No common upregulated genes found.</p>', unsafe_allow_html=True)
 
         with col2:
-            st.subheader('Common Down-regulated Genes')
+            #st.subheader('Common Down-regulated Genes')
+            st.markdown("<h3 style='color: black;'>Common Down-regulated Genes</h3>", unsafe_allow_html=True)
             if isinstance(common_downregulated, set) and common_downregulated:
                 num_genes = len(common_downregulated)
                 st.markdown(f"<p style='font-size: 18px; color: #1F4E79; font-weight: bold;'>"
@@ -116,4 +122,5 @@ def show_common(df):
                             f"Common Downregulated Genes: {', '.join(list(common_downregulated))}</p>", 
                             unsafe_allow_html=True)
             else:
-                st.write("No common downregulated genes found.")  
+                #st.write("No common downregulated genes found.") 
+                st.write('<p class="text">No common downregulated genes found.</p>', unsafe_allow_html=True)
