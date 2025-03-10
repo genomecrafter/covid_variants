@@ -25,7 +25,7 @@ def show_genes(df):
         }
 
         div[data-baseweb="select"] * {
-            color: #1F4E79 !important; /* Dark blue text */
+            color: white !important; /* Dark blue text */
             font-weight: bold !important;
             font-size: 18px !important;
         }
