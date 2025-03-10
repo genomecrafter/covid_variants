@@ -27,7 +27,7 @@ def show_common(df):
 
         /* Force input text inside select box to be visible */
         div[data-baseweb="select"] input {
-            color: #1F4E79 !important;
+            color: white !important;
             font-weight: bold !important;
             font-size: 18px !important;
         }
@@ -75,7 +75,7 @@ def show_common(df):
 
     # Center-aligned label for multiselect
     st.markdown(
-        "<h3 style='text-align: center; color: #1F4E79; font-weight: bold;'>Select Multiple Gene Variants</h3>",
+        "<h3 style='text-align: center; color: black; font-weight: bold;'>Select Multiple Gene Variants</h3>",
         unsafe_allow_html=True
     )
 
