@@ -39,9 +39,9 @@ def about_page():
 
     col_logo, col_logo1,col_logo2 = st.columns([1,1,5])
     with col_logo1:
-        st.image("images//logo-rvce.png", use_container_width=True, caption="RV College of Engineering")  # Update with actual image path
+        st.image("images/logo-rvce.png", use_container_width=True, caption="RV College of Engineering")  # Update with actual image path
     with col_logo2:
-        st.image("images//coe.png", width=600, caption="Computational Genomics Centre of Excellence")  # Update with actual image path
+        st.image("images/coe.png", width=600, caption="Computational Genomics Centre of Excellence")  # Update with actual image path
 
     # Side-by-side layout for sections
     col1, col2 = st.columns(2)
