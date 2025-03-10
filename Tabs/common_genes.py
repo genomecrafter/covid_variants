@@ -68,6 +68,9 @@ def show_common(df):
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
+        .subheader{
+            font-color : black !important;
+        }
         </style>
         """,
         unsafe_allow_html=True
@@ -87,7 +90,7 @@ def show_common(df):
     selected_variants = st.multiselect("", gene_variants)  # Empty label so header appears separately
 
     if len(selected_variants) < 2:
-        st.markdown("<p style='color: black;'>Please select at least two gene variants to find common genes.</p>", unsafe_allow_html=True)  
+        st.markdown("<p style='color: black;'>Please select at least two gene variants to find common genes.</p>")  
         return  
 
     if selected_variants:
@@ -105,7 +108,7 @@ def show_common(df):
                             f"Common Upregulated Genes: {', '.join(list(common_upregulated))}</p>", 
                             unsafe_allow_html=True)
             else:
-                st.markdown("<p style='color: black;'>No common upregulated genes found.</p>", unsafe_allow_html=True)    
+                st.markdown("<p style='color: black;'>No common upregulated genes found.</p>")    
 
         with col2:
             st.subheader('Common Down-regulated Genes')
@@ -116,4 +119,4 @@ def show_common(df):
                             f"Common Downregulated Genes: {', '.join(list(common_downregulated))}</p>", 
                             unsafe_allow_html=True)
             else:
-                st.markdown("<p style='color: black;'>No common downregulated genes found.</p>", unsafe_allow_html=True)  
+                st.markdown("<p style='color: black;'>No common downregulated genes found.</p>")
