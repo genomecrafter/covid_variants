@@ -87,7 +87,7 @@ def show_common(df):
     selected_variants = st.multiselect("", gene_variants)  # Empty label so header appears separately
 
     if len(selected_variants) < 2:
-        st.write("Please select at least two gene variants to find common genes.")
+        st.write(<p style='color: black;'>"Please select at least two gene variants to find common genes."</p>)  
         return  
 
     if selected_variants:
@@ -100,20 +100,20 @@ def show_common(df):
             st.subheader('Common Up-regulated Genes')
             if isinstance(common_upregulated, set) and common_upregulated:
                 num_genes = len(common_upregulated)
-                st.markdown(f"<p style='font-size: 18px; color: #1F4E79; font-weight: bold;'>"
+                st.markdown(f"<p style='font-size: 18px; color: black; font-weight: bold;'>"
                             f"Number of Common Upregulated Genes found: {num_genes}<br>"
                             f"Common Upregulated Genes: {', '.join(list(common_upregulated))}</p>", 
                             unsafe_allow_html=True)
             else:
-                st.write("No common upregulated genes found.")  
+                st.write(<p style='color: black;'>"No common upregulated genes found."</p>)    
 
         with col2:
             st.subheader('Common Down-regulated Genes')
             if isinstance(common_downregulated, set) and common_downregulated:
                 num_genes = len(common_downregulated)
-                st.markdown(f"<p style='font-size: 18px; color: #1F4E79; font-weight: bold;'>"
+                st.markdown(f"<p style='font-size: 18px; color: black; font-weight: bold;'>"
                             f"Number of Common Downregulated Genes found: {num_genes}<br>"
                             f"Common Downregulated Genes: {', '.join(list(common_downregulated))}</p>", 
                             unsafe_allow_html=True)
             else:
-                st.write("No common downregulated genes found.")  
+                st.write(<p style='color: black;'>"No common downregulated genes found."</p>)  
