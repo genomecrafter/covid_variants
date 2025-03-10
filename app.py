@@ -13,17 +13,19 @@ st.markdown(
     <style>
     /* Change the top bar background */
     header[data-testid="stHeader"] {
-        background-color: #1F4E79 !important;
+        background-color: #e6f2ff !important;
     }
+
     
+
     /* Remove the white gap below the top bar */
     header[data-testid="stHeader"] div {
-        background-color: #1F4E79 !important;
+        background-color: #e6f2ff !important;
     }
 
     /* Sidebar (Navigation Bar) Styling */
     [data-testid="stSidebar"] {
-        background-color: #1F4E79;
+        background-color: #1179ae;
         padding: 20px;
     }
 
@@ -63,7 +65,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 
 # Navigation Tabs
 Tabs = {
