@@ -1,7 +1,7 @@
 import pandas as pd
 
 def load_and_process_data(file_path):
-    df = pd.read_excel(file_path, header=None)
+    df = pd.read_excel(file_path, header=None,engine = 'openpyxl')
 
     column_names = []
     for i in range(0, df.shape[1], 2):  
