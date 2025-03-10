@@ -27,7 +27,7 @@ def show_common(df):
 
         /* Force input text inside select box to be visible */
         div[data-baseweb="select"] input {
-            color: white !important;
+            color: #1F4E79 !important;
             font-weight: bold !important;
             font-size: 18px !important;
         }
@@ -68,9 +68,6 @@ def show_common(df):
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .subheader{
-            font-color : black !important;
-        }
         </style>
         """,
         unsafe_allow_html=True
@@ -78,7 +75,7 @@ def show_common(df):
 
     # Center-aligned label for multiselect
     st.markdown(
-        "<h3 style='text-align: center; color: black; font-weight: bold;'>Select Multiple Gene Variants</h3>",
+        "<h3 style='text-align: center; color: #1F4E79; font-weight: bold;'>Select Multiple Gene Variants</h3>",
         unsafe_allow_html=True
     )
 
@@ -90,7 +87,7 @@ def show_common(df):
     selected_variants = st.multiselect("", gene_variants)  # Empty label so header appears separately
 
     if len(selected_variants) < 2:
-        st.markdown("<p style='color: black;'>Please select at least two gene variants to find common genes.</p>")  
+        st.write("Please select at least two gene variants to find common genes.")
         return  
 
     if selected_variants:
@@ -103,20 +100,20 @@ def show_common(df):
             st.subheader('Common Up-regulated Genes')
             if isinstance(common_upregulated, set) and common_upregulated:
                 num_genes = len(common_upregulated)
-                st.markdown(f"<p style='font-size: 18px; color: black; font-weight: bold;'>"
+                st.markdown(f"<p style='font-size: 18px; color: #1F4E79; font-weight: bold;'>"
                             f"Number of Common Upregulated Genes found: {num_genes}<br>"
                             f"Common Upregulated Genes: {', '.join(list(common_upregulated))}</p>", 
                             unsafe_allow_html=True)
             else:
-                st.markdown("<p style='color: black;'>No common upregulated genes found.</p>")    
+                st.write("No common upregulated genes found.")  
 
         with col2:
             st.subheader('Common Down-regulated Genes')
             if isinstance(common_downregulated, set) and common_downregulated:
                 num_genes = len(common_downregulated)
-                st.markdown(f"<p style='font-size: 18px; color: black; font-weight: bold;'>"
+                st.markdown(f"<p style='font-size: 18px; color: #1F4E79; font-weight: bold;'>"
                             f"Number of Common Downregulated Genes found: {num_genes}<br>"
                             f"Common Downregulated Genes: {', '.join(list(common_downregulated))}</p>", 
                             unsafe_allow_html=True)
             else:
-                st.markdown("<p style='color: black;'>No common downregulated genes found.</p>")
+                st.write("No common downregulated genes found.")  
