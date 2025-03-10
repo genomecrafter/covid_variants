@@ -10,6 +10,12 @@ def show_genes(df):
             background-color: #e6f2ff;
         }
 
+        h1, h2,h3,subheader {
+            text-align: center;
+            color: black !important; /* Ensure text is black */
+            font-weight: bold;
+        }
+
         /* Centering and styling the select box */
         div[data-baseweb="select"] {
             width: 60% !important;
