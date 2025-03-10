@@ -32,7 +32,7 @@ def show_genes(df):
 
         /* Ensure input text inside select box is visible */
         div[data-baseweb="select"] input {
-            color: #1F4E79 !important;
+            color: white !important;
             font-weight: bold !important;
             font-size: 18px !important;
         }
@@ -44,7 +44,7 @@ def show_genes(df):
         }
 
         ul[role="listbox"] li {
-            color: #1F4E79 !important;
+            color: white !important;
             font-size: 18px !important;
             font-weight: bold !important;
         }
@@ -77,13 +77,6 @@ def show_genes(df):
         /* Ensure table/list text is black */
         .stDataFrame, .stText, .stTable {
             color: black !important;
-        }
-
-        /* Center-aligned headers */
-        h3 {
-            text-align: center;
-            color: #1F4E79;
-            font-weight: bold;
         }
         </style>
         """,
