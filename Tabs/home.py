@@ -58,11 +58,26 @@ def show_home():
 
     with col3:
         st.markdown('<p class="subtitle">🔍 How Does It Work?</p>', unsafe_allow_html=True)
+    
         st.markdown("""
-    - **Select a COVID-19 variant** to view its associated **up-regulated** (activated) and **down-regulated** (suppressed) genes.
-    - **Compare multiple variants** to find **common genes**, which may help in understanding shared biological mechanisms and potential therapeutic targets.
-    - The data is sourced from **genetic studies and analyses** to provide insights into how COVID-19 affects gene expression in different variants.
+    <style>
+        .black-text ul {
+            color: black;
+        }
+        .black-text li {
+            color: black;
+            font-size: 16px; /* Adjust size if needed */
+        }
+    </style>
+    <div class="black-text">
+        <ul>
+            <li><b>Select a COVID-19 variant</b> to view its associated <b>up-regulated</b> (activated) and <b>down-regulated</b> (suppressed) genes.</li>
+            <li><b>Compare multiple variants</b> to find <b>common genes</b>, which may help in understanding shared biological mechanisms and potential therapeutic targets.</li>
+            <li>The data is sourced from <b>genetic studies and analyses</b> to provide insights into how COVID-19 affects gene expression in different variants.</li>
+        </ul>
+    </div>
     """, unsafe_allow_html=True)
+
 
     with col4:
         st.image("images//th1.png", caption="DNA strand", use_container_width=True)
@@ -76,12 +91,20 @@ def show_home():
     with col6:
         st.markdown('<p class="subtitle">🌟 Why is This Important?</p>', unsafe_allow_html=True)
         st.markdown("""
-    - Helps in identifying **biomarkers** for disease severity and progression.
-    - Aids in **drug discovery** by targeting common gene expressions across variants.
-    - Supports scientific research on the genetic response to COVID-19.
+    <style>
+    .text {
+        color: black !important;
+        font-size: 16px;
+    }
+    </style>
+    <div class="text">
+    <ul>
+        <li>Helps in identifying <b>biomarkers</b> for disease severity and progression.</li>
+        <li>Aids in <b>drug discovery</b> by targeting common gene expressions across variants.</li>
+        <li>Supports scientific research on the genetic response to COVID-19.</li>
+    </ul>
+    </div>
     """, unsafe_allow_html=True)
-
-
 
 
 
