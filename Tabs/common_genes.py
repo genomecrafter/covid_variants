@@ -87,7 +87,7 @@ def show_common(df):
     selected_variants = st.multiselect("", gene_variants)  # Empty label so header appears separately
 
     if len(selected_variants) < 2:
-        st.write(<p style='color: black;'>"Please select at least two gene variants to find common genes."</p>)  
+        st.markdown(<p style='color: black;'>"Please select at least two gene variants to find common genes."</p>)  
         return  
 
     if selected_variants:
@@ -105,7 +105,7 @@ def show_common(df):
                             f"Common Upregulated Genes: {', '.join(list(common_upregulated))}</p>", 
                             unsafe_allow_html=True)
             else:
-                st.write(<p style='color: black;'>"No common upregulated genes found."</p>)    
+                st.markdown(<p style='color: black;'>"No common upregulated genes found."</p>)    
 
         with col2:
             st.subheader('Common Down-regulated Genes')
@@ -116,4 +116,4 @@ def show_common(df):
                             f"Common Downregulated Genes: {', '.join(list(common_downregulated))}</p>", 
                             unsafe_allow_html=True)
             else:
-                st.write(<p style='color: black;'>"No common downregulated genes found."</p>)  
+                st.markdown(<p style='color: black;'>"No common downregulated genes found."</p>)  
