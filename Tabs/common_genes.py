@@ -90,7 +90,7 @@ def show_common(df):
     selected_variants = st.multiselect("", gene_variants)  # Empty label so header appears separately
 
     if len(selected_variants) < 2:
-        st.write("Please select at least two gene variants to find common genes.")
+        st.write('<p class="text">Please select at least two gene variants to find common genes.</p>', unsafe_allow_html=True)
         return  
 
     if selected_variants:
