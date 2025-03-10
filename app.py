@@ -13,19 +13,22 @@ st.markdown(
     <style>
     /* Change the top bar background */
     header[data-testid="stHeader"] {
-        background-color: #e6f2ff !important;
+        background-color:#1F4E79 !important;
     }
 
     
 
     /* Remove the white gap below the top bar */
     header[data-testid="stHeader"] div {
-        background-color: #e6f2ff !important;
+        background-color: #1F4E79 !important;
     }
 
+    header[data-testid="stHeader"] a:hover {
+        background-color: white !important;
+    }
     /* Sidebar (Navigation Bar) Styling */
     [data-testid="stSidebar"] {
-        background-color: #1179ae;
+        background-color: #1F4E79;
         padding: 20px;
     }
 
@@ -47,7 +50,7 @@ st.markdown(
 
     /* Hover effect */
     [data-testid="stSidebarNav"] a:hover {
-        background-color: #357ABD;
+        background-color: white;
     }
 
     /* Selected item in the sidebar */
@@ -61,6 +64,19 @@ st.markdown(
     .main {
         background-color: #F0F2F6;
     }
+
+
+    /* Target the top left header where the caret (>) icon appears */
+    header[data-testid="stHeader"]::after {
+        content: "Menu";
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        position: relative;
+        left: 0px; /* Adjust position to align properly */
+        top: 25px; /* Align with caret symbol */
+    }
+
     </style>
     """,
     unsafe_allow_html=True
