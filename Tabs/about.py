@@ -35,6 +35,7 @@ def about_page():
             width: 70%;
             text-align: center;
             font-size: 18px;
+            font-color: black;
         }
 
         /* Columns styling */
